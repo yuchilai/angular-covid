@@ -4,7 +4,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/">
-      <img src="assets/image/covid19_1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="https://cdn.jsdelivr.net/gh/yuchilai/angular-covid@master/src/assets/image/covid19_1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
         {{ title }}
     </a>
 
@@ -30,7 +30,7 @@
     </h1> -->
     <br>
     <br>
-    <img width="300" alt="Angular Logo" src="https://github.com/yuchilai/angular-covid/tree/master/src/assets/image/Covid19.jpg">
+    <img width="300" alt="Angular Logo" src="https://cdn.jsdelivr.net/gh/yuchilai/angular-covid@master/src/assets/image/Covid19.jpg">
     <br>
     <br>
     <br>
@@ -97,7 +97,7 @@
             <table>
               <tbody>
                 <tr class="row100 body" *ngFor="let country of countries | filter: searchText">
-                  <td class="cell100 column1"><img width="80" height="50" src="assets/image/{{country.country}}.jpg" alt="{{country.country}}"><p class="font-weight-bold">{{country.country}}</p></td>
+                  <td class="cell100 column1"><img width="80" height="50" src="https://cdn.jsdelivr.net/gh/yuchilai/angular-covid@master/src/assets/image/{{country.country}}.jpg" alt="{{country.country}}"><p class="font-weight-bold">{{country.country}}</p></td>
                   <td class="cell100 column2"><p class="text-secondary font-weight-bold">{{country.cases}}</p></td>
                   <td class="cell100 column3 "><p class="text-primary">+{{country.todayCases}}&nbsp;&nbsp;<span class="badge badge-secondary">New</span></p></td>
                   <td class="cell100 column4"><p class="text-danger">{{country.deaths}}</p></td>
