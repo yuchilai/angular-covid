@@ -41,7 +41,7 @@
           <div class="card">
             <div class="card-body">
               <h2 class="card-title">Total Cases</h2>
-              <h3 class="p-3 mb-2 bg-warning text-dark"><p class="card-text">{{posts.cases}}</p></h3>
+              <h3 class="p-3 mb-2 bg-warning text-dark"><p class="card-text">{{posts?.cases}}</p></h3>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
           <div class="card">
             <div class="card-body">
               <h2 class="card-title">Deaths</h2>
-              <h3 class="p-3 mb-2 bg-danger text-white"><p class="card-text">{{posts.deaths}}</p></h3>
+              <h3 class="p-3 mb-2 bg-danger text-white"><p class="card-text">{{posts?.deaths}}</p></h3>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
           <div class="card">
             <div class="card-body">
               <h2 class="card-title">Recovered</h2>
-              <h3 class="p-3 mb-2 bg-success text-white"><p class="card-text">{{posts.recovered}}</p></h3>
+              <h3 class="p-3 mb-2 bg-success text-white"><p class="card-text">{{posts?.recovered}}</p></h3>
             </div>
           </div>
         </div>
@@ -97,12 +97,12 @@
             <table>
               <tbody>
                 <tr class="row100 body" *ngFor="let country of countries | filter: searchText">
-                  <td class="cell100 column1"><img width="80" height="50" src="https://cdn.jsdelivr.net/gh/yuchilai/angular-covid@master/src/assets/image/{{country.country}}.jpg" alt="{{country.country}}"><p class="font-weight-bold">{{country.country}}</p></td>
-                  <td class="cell100 column2"><p class="text-secondary font-weight-bold">{{country.cases}}</p></td>
-                  <td class="cell100 column3 "><p class="text-primary">+{{country.todayCases}}&nbsp;&nbsp;<span class="badge badge-secondary">New</span></p></td>
-                  <td class="cell100 column4"><p class="text-danger">{{country.deaths}}</p></td>
-                  <td class="cell100 column5"><p class="text-primary">+{{country.todayDeaths}}&nbsp;&nbsp;<span class="badge badge-secondary">New</span></p></td>
-                  <td class="cell100 column6"><p class="text-success">{{country.recovered}}</p></td>
+                  <td class="cell100 column1"><img width="80" height="50" src="https://cdn.jsdelivr.net/gh/yuchilai/angular-covid@master/src/assets/image/{{country.country}}.jpg" alt="{{country.country}}"><p class="font-weight-bold">{{country?.country}}</p></td>
+                  <td class="cell100 column2"><p class="text-secondary font-weight-bold">{{country?.cases}}</p></td>
+                  <td class="cell100 column3 "><p class="text-primary">+{{country?.todayCases}}&nbsp;&nbsp;<span class="badge badge-secondary">New</span></p></td>
+                  <td class="cell100 column4"><p class="text-danger">{{country?.deaths}}</p></td>
+                  <td class="cell100 column5"><p class="text-primary">+{{country?.todayDeaths}}&nbsp;&nbsp;<span class="badge badge-secondary">New</span></p></td>
+                  <td class="cell100 column6"><p class="text-success">{{country?.recovered}}</p></td>
                   <td class="cell100 column7"><p class="text-info">{{country.critical}}</p></td>
                 </tr>
               </tbody>
